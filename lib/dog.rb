@@ -90,7 +90,7 @@ class Dog
     end
   end
   
-  def update
+  def update(name)
     
   end
   
