@@ -34,9 +34,9 @@ class Dog
     DB[:conn].execute(sql, self.name, self.breed)
     sql = <<-SQL
       SELECT id FROM dogs
-      WHERE name = ? AND 
+      WHERE name = ? AND breed = ?
     SQL
-    DB[:conn].execute(sql, self.name, self.breed)
+    @id = DB[:conn].execute(sql, self.name, self.breed)[0][0]
     self
   end
   
