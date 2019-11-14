@@ -66,7 +66,7 @@ class Dog
     end
   end
   
-  def self.find_or_create_by
+  def self.find_or_create_by(hashdog)
     
   end
   
