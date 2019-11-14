@@ -62,4 +62,6 @@ class Dog
     Dog.new_from_db(row)
   end
   
+  
+  
 end
