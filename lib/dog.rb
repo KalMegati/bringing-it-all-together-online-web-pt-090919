@@ -71,7 +71,7 @@ class Dog
       SELECT * FROM dogs WHERE name = ? AND breed = ?
     SQL
     row = DB[:conn].execute(sql, hashdog[:name], hashdog[:breed])[0]
-    if row.empty?
+    if row
       Dog.new_from_db(row)
     else
       Dog.create(hashdog)
