@@ -70,7 +70,7 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? AND breed = ?
     SQL
-    row = DB[:conn].execute(sql, hashdog.name, hashdog.breed)[0]
+    row = DB[:conn].execute(sql, hashdog[:name], hashdog[:breed])[0]
     if row.empty?
       Dog.new_from_db(row)
     else
