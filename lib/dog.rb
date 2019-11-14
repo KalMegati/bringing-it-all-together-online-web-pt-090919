@@ -54,4 +54,12 @@ class Dog
     Dog.new(hashdog)
   end
   
+  def self.find_by_id(id)
+    sql = <<-SQL
+      SELECT * FROM dogs WHERE id = ?
+    SQL
+    row = DB[:conn].execute(sql, id)[0]
+    Dog.new_from_db(row)
+  end
+  
 end
