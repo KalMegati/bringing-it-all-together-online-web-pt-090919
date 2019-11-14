@@ -8,6 +8,8 @@ class Dog
     @id = hashdog[:id]
   end
   
-  
+  def self.create_table
+    
+  end
   
 end
