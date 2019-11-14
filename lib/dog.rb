@@ -92,8 +92,12 @@ class Dog
   
   def update
     sql = <<-SQL
-      
+      UPDATE dogs
+      SET name = ?
+      WHERE id = ?
     SQL
+    DB[:conn].execute(sql, self.name, self.id)
+    self
   end
   
 end
