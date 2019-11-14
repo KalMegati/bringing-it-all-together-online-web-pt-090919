@@ -40,4 +40,9 @@ class Dog
     self
   end
   
+  def self.create(hashdog)
+    dog = Dog.new(hashdog)
+    dog.save
+  end
+  
 end
